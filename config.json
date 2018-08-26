@@ -1,0 +1,30 @@
+{
+    "Tags": [
+      {
+        "Name": "Work",
+        "Servers": [
+          {
+            "Name": "MySQL box",
+            "Address": "mysql.example.com"
+          },
+          {
+            "Name": "Load Balancer",
+            "Address": "lb.example.com"
+          }
+        ]
+      },
+      {
+        "Name": "Personal",
+        "Servers": [
+          {
+            "Name": "Box1",
+            "Address": "127.0.0.1"
+          },
+          {
+            "Name": "Box2",
+            "Address": "192.168.1.1"
+          }
+        ]
+      }
+    ]
+  }
