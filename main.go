@@ -53,11 +53,16 @@ func main() {
 			fmt.Printf("%v.    %s (%s)\n", serverCount, el2.Name, el2.Address)
 		}
 	}
+askAgain: // Yes, I know, people dislike goto
 	fmt.Println("What server would you like to connect to?")
 	var input string
 	fmt.Scanln(&input)
 	inputNumeric, err := strconv.ParseInt(input, 10, 16)
 	check(err)
+	if inputNumeric < 1 || inputNumeric > int64(len(servers)) {
+		fmt.Println("Invalid number")
+		goto askAgain // Yes, I know, people dislike goto
+	}
 	inputNumeric-- // Fix off-by-one error
 	str := fmt.Sprintf("Connecting to %s (%s)...", servers[inputNumeric].Name, servers[inputNumeric].Address)
 	fmt.Println(aurora.Red(str))
