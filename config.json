@@ -8,7 +8,7 @@
             "Address": "mysql.example.com"
           },
           {
-            "Name": "Load Balancer",
+            "Name": "Load balancer",
             "Address": "lb.example.com"
           }
         ]
@@ -17,11 +17,11 @@
         "Name": "Personal",
         "Servers": [
           {
-            "Name": "Box1",
+            "Name": "Localhost",
             "Address": "127.0.0.1"
           },
           {
-            "Name": "Box2",
+            "Name": "Router",
             "Address": "192.168.1.1"
           }
         ]
