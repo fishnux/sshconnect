@@ -10,6 +10,7 @@ To get started just download a pre-compiled binary (or compile it yourself) and 
 ```
 # For MacOS:
 wget https://github.com/fishnux/sshconnect/releases/download/v0.1.0/sshconnect_osx -O /usr/local/bin/sshconnect && chmod +x /usr/local/bin/sshconnect
+# Other platforms: https://github.com/fishnux/sshconnect/releases
 ```
 ```
 sshconnect
