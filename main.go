@@ -132,6 +132,9 @@ func main() {
 			env := os.Environ()
 			execErr := syscall.Exec(binary, args, env)
 			check(execErr)
+		} else if input == "help" {
+			fmt.Println("Please visit https://github.com/fishnux/sshconnect")
+			os.Exit(0)
 		} else {
 			fmt.Println("Invalid command, exiting...")
 			os.Exit(0)
