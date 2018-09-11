@@ -17,3 +17,5 @@ sshconnect
 ```
 ![screenshot](https://i.imgur.com/ZVATwux.png)
 (sorry for the large screenshot)
+
+You can also type certain commands during the server selection, such as "edit" (to edit sshconnect.json) and "add" (to interactively add a new server).
