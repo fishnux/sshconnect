@@ -120,6 +120,18 @@ func main() {
 			err = ioutil.WriteFile(configLocation, json, 0700)
 			check(err)
 			fmt.Println("Done, please re-run this program")
+		} else if input == "edit" {
+			command := "editor"
+			binary, lookErr := exec.LookPath(command)
+			if lookErr != nil {
+				command = "nano"
+				binary, lookErr = exec.LookPath(command)
+			}
+			check(lookErr)
+			args := []string{command, configLocation}
+			env := os.Environ()
+			execErr := syscall.Exec(binary, args, env)
+			check(execErr)
 		} else {
 			fmt.Println("Invalid command, exiting...")
 			os.Exit(0)
